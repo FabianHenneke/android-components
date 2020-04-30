@@ -115,10 +115,6 @@ subprojects {
                 }
             }
 
-            dependencies {
-                lintChecks project(':tooling-lint')
-            }
-
             android {
                 testOptions {
                     unitTests {
@@ -283,7 +279,6 @@ configurations {
 
 dependencies {
     ktlint "com.github.shyiko:ktlint:0.31.0"
-    detektPlugins project(":tooling-detekt")
 }
 
 task ktlint(type: JavaExec, group: "verification") {
